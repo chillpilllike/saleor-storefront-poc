@@ -8,7 +8,7 @@ RUN apk add --no-cache bash git libc6-compat
 WORKDIR /app
 
 # Install pnpm globally
-RUN corepack enable && corepack prepare pnpm@7.11.0 --activate
+RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 
 # Copy the entire project to the working directory
 COPY . .
