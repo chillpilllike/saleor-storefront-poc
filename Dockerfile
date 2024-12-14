@@ -20,4 +20,4 @@ RUN pnpm i
 EXPOSE 3000
 
 # Set the default command to start the development server
-CMD ["pnpm", "start"]
+CMD ["pnpm", "dev"]
