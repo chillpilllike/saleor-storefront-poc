@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const config = {
 	images: {
-		domains: ["secretgreen9.s3.ap-southeast-2.amazonaws.com"],
+		remotePatterns: [
+			{
+				hostname: "*",
+			},
+		],
 	},
 	experimental: {
 		typedRoutes: false,
