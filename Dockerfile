@@ -28,7 +28,7 @@ RUN npm install \
     prettier@2.7.1 \
     turbo@1.6.1 \
     typescript@4.8.4 \
-    --save-dev --legacy-peer-deps
+    --save-dev --legacy-peer-deps --no-workspaces
 
 # Install dependencies using pnpm
 RUN pnpm i
