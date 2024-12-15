@@ -13,7 +13,7 @@ RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 # Copy the entire project to the working directory
 COPY . .
 
-RUN npm install \
+RUN pnpm add \
     @babel/core@^7.0.0 \
     ts-node@>=10.0.0 \
     postcss@^8.4.21 \
@@ -28,7 +28,7 @@ RUN npm install \
     prettier@2.7.1 \
     turbo@1.6.1 \
     typescript@4.8.4 \
-    --save-dev --legacy-peer-deps --no-workspaces
+    --save-dev
 
 # Install dependencies using pnpm
 RUN pnpm i
