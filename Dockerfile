@@ -10,9 +10,6 @@ WORKDIR /app
 # Install pnpm globally
 RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 
-# Install pnpm explicitly
-RUN npm install -g pnpm@latest
-
 RUN pnpm add \
     @babel/core@^7.0.0 \
     ts-node@>=10.0.0 \
