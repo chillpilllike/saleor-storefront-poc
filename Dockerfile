@@ -10,6 +10,9 @@ WORKDIR /app
 # Install pnpm globally
 RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 
+# Install pnpm explicitly
+RUN npm install -g pnpm@latest
+
 # Copy the entire project to the working directory
 COPY . .
 
