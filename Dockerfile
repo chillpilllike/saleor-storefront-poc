@@ -13,9 +13,6 @@ RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 # Install pnpm explicitly
 RUN npm install -g pnpm@latest
 
-# Copy the entire project to the working directory
-COPY . .
-
 RUN pnpm add \
     @babel/core@^7.0.0 \
     ts-node@>=10.0.0 \
@@ -32,6 +29,10 @@ RUN pnpm add \
     turbo@1.6.1 \
     typescript@4.8.4 \
     --save-dev
+
+
+# Copy the entire project to the working directory
+COPY . .
 
 # Install dependencies using pnpm
 RUN pnpm i
